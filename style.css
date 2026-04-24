@@ -297,7 +297,7 @@ body::after {
 .hero-content {
   position:relative; z-index:2;
   max-width:1400px; margin:0 auto;
-  padding:0 3rem 6rem;
+  padding:7rem 3rem 6rem;
   display:grid; grid-template-columns:1.1fr .9fr;
   align-items:flex-end; gap:4rem; width:100%;
 }
@@ -311,7 +311,7 @@ body::after {
 
 .hero-headline {
   font-family:var(--display);
-  font-size:clamp(5.5rem,10vw,9.5rem);
+  font-size: clamp(4rem, 8vw, 7rem);
   line-height:.9; letter-spacing:.015em;
   display:flex; flex-direction:column; margin-bottom:1.8rem;
 }
