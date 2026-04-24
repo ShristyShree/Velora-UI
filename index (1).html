@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velora Motors — Drive Luxury Beyond Limits</title>
+  <meta name="description" content="The world's premier luxury automotive marketplace. Buy and explore the finest cars in one seamless experience." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600&family=Manrope:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══ CURSOR ══ -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- ══ LOADER ══ -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">V</div>
+      <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+      <p class="loader-text">Loading Experience</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-badge">V</span>
+        <span class="logo-wordmark">Velora<em>Motors</em></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero"       class="nav-link">Home</a></li>
+        <li><a href="#collection" class="nav-link">Collection</a></li>
+        <li><a href="#features"   class="nav-link">Features</a></li>
+        <li><a href="#reviews"    class="nav-link">Reviews</a></li>
+        <li><a href="#contact"    class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="#" class="btn-nav-cta">Download App</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-overlay" id="mobileOverlay">
+    <button class="mob-close" id="mobClose">✕</button>
+    <nav class="mob-nav">
+      <a href="#hero"       onclick="closeMobile()">Home</a>
+      <a href="#collection" onclick="closeMobile()">Collection</a>
+      <a href="#features"   onclick="closeMobile()">Features</a>
+      <a href="#reviews"    onclick="closeMobile()">Reviews</a>
+      <a href="#contact"    onclick="closeMobile()">Contact</a>
+    </nav>
+    <a href="#" class="mob-cta">Download App →</a>
+  </div>
+
+  <!-- ═══════════════════════ HERO ═══════════════════════ -->
+  <section id="hero" class="hero">
+    <div class="hero-bg" id="heroBg">
+      <!-- Real Rolls Royce — most cinematic for hero -->
+      <img src="img_rolls.jpg" alt="Rolls-Royce" class="hero-img" id="heroImg" />
+      <div class="hero-overlay"></div>
+      <div class="hero-vignette"></div>
+      <div class="hero-noise"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="hero-eyebrow">
+          <span class="eyebrow-line"></span>
+          <span>The Future of Automotive Luxury</span>
+        </div>
+        <h1 class="hero-headline">
+          <span class="h-line" style="--d:0ms">DRIVE</span>
+          <span class="h-line gold" style="--d:120ms">LUXURY</span>
+          <span class="h-line" style="--d:240ms">BEYOND</span>
+          <span class="h-line outline" style="--d:360ms">LIMITS</span>
+        </h1>
+        <p class="hero-sub">Buy and explore the world's most coveted automobiles in one seamless, white-glove experience. Curated. Verified. Delivered.</p>
+        <div class="hero-ctas">
+          <a href="#collection" class="btn-primary">
+            <span>Explore Collection</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#" class="btn-ghost">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.22.15-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            <span>Get the App</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="stat-num" data-target="2400" data-suffix="+">0</span>
+            <span class="stat-label">Premium Cars</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="hero-stat">
+            <span class="stat-num" data-target="180" data-suffix="+">0</span>
+            <span class="stat-label">Verified Dealers</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="hero-stat">
+            <span class="stat-num" data-target="98" data-suffix="%">0</span>
+            <span class="stat-label">Satisfaction Rate</span>
+          </div>
+        </div>
+
+        <!-- Floating info card -->
+        <div class="hero-card" id="heroCard">
+          <div class="hcard-img">
+            <img src="img_rolls.jpg" alt="Rolls-Royce" />
+          </div>
+          <div class="hcard-body">
+            <div class="hcard-brand">Rolls-Royce · 2024</div>
+            <div class="hcard-name">Phantom Series II</div>
+            <div class="hcard-specs">
+              <span>563 hp</span><span>5.1s 0–60</span><span>V12</span>
+            </div>
+            <div class="hcard-price">$450,000</div>
+          </div>
+          <div class="hcard-arrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <div class="scroll-track"><div class="scroll-thumb"></div></div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ BRAND MARQUEE ═══════════════════════ -->
+  <div class="brand-strip">
+    <div class="brand-track">
+      <div class="brand-list" id="brandList">
+        <span class="brand-item">Porsche</span><span class="brand-sep">✦</span>
+        <span class="brand-item">BMW</span><span class="brand-sep">✦</span>
+        <span class="brand-item">Mercedes-AMG</span><span class="brand-sep">✦</span>
+        <span class="brand-item">Lamborghini</span><span class="brand-sep">✦</span>
+        <span class="brand-item">Rolls-Royce</span><span class="brand-sep">✦</span>
+        <span class="brand-item">Ferrari</span><span class="brand-sep">✦</span>
+        <span class="brand-item">Bentley</span><span class="brand-sep">✦</span>
+        <span class="brand-item">Aston Martin</span><span class="brand-sep">✦</span>
+        <span class="brand-item">McLaren</span><span class="brand-sep">✦</span>
+        <span class="brand-item">Tesla</span><span class="brand-sep">✦</span>
+        <!-- duplicate for seamless loop -->
+        <span class="brand-item">Porsche</span><span class="brand-sep">✦</span>
+        <span class="brand-item">BMW</span><span class="brand-sep">✦</span>
+        <span class="brand-item">Mercedes-AMG</span><span class="brand-sep">✦</span>
+        <span class="brand-item">Lamborghini</span><span class="brand-sep">✦</span>
+        <span class="brand-item">Rolls-Royce</span><span class="brand-sep">✦</span>
+        <span class="brand-item">Ferrari</span><span class="brand-sep">✦</span>
+        <span class="brand-item">Bentley</span><span class="brand-sep">✦</span>
+        <span class="brand-item">Aston Martin</span><span class="brand-sep">✦</span>
+        <span class="brand-item">McLaren</span><span class="brand-sep">✦</span>
+        <span class="brand-item">Tesla</span><span class="brand-sep">✦</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════ COLLECTION ═══════════════════════ -->
+  <section id="collection" class="collection">
+    <div class="container">
+
+      <header class="section-header reveal">
+        <div class="section-tag">Featured Collection</div>
+        <h2 class="section-title">Handpicked <em>Masterpieces</em></h2>
+        <p class="section-sub">Every vehicle inspected, verified, and ready for your journey.</p>
+      </header>
+
+      <div class="filter-row reveal">
+        <button class="filter-pill active" data-filter="all">All</button>
+        <button class="filter-pill" data-filter="coupe">Coupe</button>
+        <button class="filter-pill" data-filter="suv">SUV</button>
+        <button class="filter-pill" data-filter="electric">Electric</button>
+        <button class="filter-pill" data-filter="gt">GT</button>
+      </div>
+
+      <!-- TOP EDITORIAL: BIG LEFT + 2 STACKED RIGHT -->
+      <div class="cars-editorial" id="carsGrid">
+
+        <!-- HERO CAR — Lamborghini (tall left) -->
+        <article class="car-hero reveal" data-cat="coupe">
+          <div class="car-photo-wrap">
+            <img src="img_lambo.jpg" alt="Lamborghini Huracán STO" class="car-photo" loading="lazy" />
+            <div class="car-photo-overlay"></div>
+          </div>
+          <div class="car-badge-top">Editor's Pick</div>
+          <div class="car-info">
+            <div class="car-brand-year">
+              <span class="car-brand">Lamborghini</span>
+              <span class="car-year">2024</span>
+            </div>
+            <h3 class="car-name">Huracán STO</h3>
+            <div class="car-specs-row">
+              <div class="car-spec"><span class="spec-l">Power</span><span class="spec-v">631 hp</span></div>
+              <div class="car-spec"><span class="spec-l">0–60</span><span class="spec-v">3.0 sec</span></div>
+              <div class="car-spec"><span class="spec-l">Top Speed</span><span class="spec-v">202 mph</span></div>
+              <div class="car-spec"><span class="spec-l">Engine</span><span class="spec-v">5.2L V10</span></div>
+            </div>
+            <div class="car-footer">
+              <div class="car-price">$330,000</div>
+              <a href="#" class="car-btn">Configure ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- STACK RIGHT -->
+        <div class="car-stack">
+
+          <article class="car-card reveal" data-cat="gt">
+            <div class="car-photo-wrap">
+              <img src="img_bmw.jpg" alt="BMW M8 Competition" class="car-photo" loading="lazy" />
+              <div class="car-photo-overlay"></div>
+            </div>
+            <div class="car-badge-top">Most Popular</div>
+            <div class="car-info">
+              <div class="car-brand-year">
+                <span class="car-brand">BMW</span>
+                <span class="car-year">2024</span>
+              </div>
+              <h3 class="car-name">M8 Competition</h3>
+              <div class="car-specs-row">
+                <div class="car-spec"><span class="spec-l">Power</span><span class="spec-v">617 hp</span></div>
+                <div class="car-spec"><span class="spec-l">0–60</span><span class="spec-v">3.2 sec</span></div>
+              </div>
+              <div class="car-footer">
+                <div class="car-price">$550,000</div>
+                <a href="#" class="car-btn">View ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="car-card reveal" data-cat="gt">
+            <div class="car-photo-wrap">
+              <img src="img_mercedes.jpg" alt="Mercedes AMG GT" class="car-photo" loading="lazy" />
+              <div class="car-photo-overlay"></div>
+            </div>
+            <div class="car-badge-top">New Arrival</div>
+            <div class="car-info">
+              <div class="car-brand-year">
+                <span class="car-brand">Mercedes-AMG</span>
+                <span class="car-year">2024</span>
+              </div>
+              <h3 class="car-name">AMG GT Black Series</h3>
+              <div class="car-specs-row">
+                <div class="car-spec"><span class="spec-l">Power</span><span class="spec-v">720 hp</span></div>
+                <div class="car-spec"><span class="spec-l">0–60</span><span class="spec-v">3.1 sec</span></div>
+              </div>
+              <div class="car-footer">
+                <div class="car-price">$760,000</div>
+                <a href="#" class="car-btn">View ↗</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- BOTTOM ROW — 2 cars -->
+      <div class="cars-row" id="carsRow">
+
+        <article class="car-wide reveal" data-cat="suv">
+          <div class="car-photo-wrap">
+            <img src="img_rolls.jpg" alt="Rolls-Royce Cullinan" class="car-photo" loading="lazy" />
+            <div class="car-photo-overlay"></div>
+          </div>
+          <div class="car-badge-top">Luxury SUV</div>
+          <div class="car-info">
+            <div class="car-brand-year">
+              <span class="car-brand">Rolls-Royce</span>
+              <span class="car-year">2024</span>
+            </div>
+            <h3 class="car-name">Cullinan Black Badge</h3>
+            <div class="car-specs-row">
+              <div class="car-spec"><span class="spec-l">Power</span><span class="spec-v">600 hp</span></div>
+              <div class="car-spec"><span class="spec-l">0–60</span><span class="spec-v">4.9 sec</span></div>
+              <div class="car-spec"><span class="spec-l">Engine</span><span class="spec-v">6.75L V12</span></div>
+            </div>
+            <div class="car-footer">
+              <div class="car-price">$430,000</div>
+              <a href="#" class="car-btn">View ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="car-wide reveal" data-cat="electric">
+          <div class="car-photo-wrap">
+            <img src="img_tesla.jpg" alt="Tesla Model S Plaid" class="car-photo" loading="lazy" />
+            <div class="car-photo-overlay"></div>
+          </div>
+          <div class="car-badge-top electric-badge">Electric</div>
+          <div class="car-info">
+            <div class="car-brand-year">
+              <span class="car-brand">Tesla</span>
+              <span class="car-year">2024</span>
+            </div>
+            <h3 class="car-name">Model S Plaid</h3>
+            <div class="car-specs-row">
+              <div class="car-spec"><span class="spec-l">Power</span><span class="spec-v">1,020 hp</span></div>
+              <div class="car-spec"><span class="spec-l">0–60</span><span class="spec-v">1.99 sec</span></div>
+              <div class="car-spec"><span class="spec-l">Range</span><span class="spec-v">396 mi</span></div>
+            </div>
+            <div class="car-footer">
+              <div class="car-price">$135,990</div>
+              <a href="#" class="car-btn">View ↗</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="view-all-wrap reveal">
+        <a href="#" class="btn-outline">Browse All 2,400+ Cars ↗</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ CINEMATIC STRIP ═══════════════════════ -->
+  <div class="cin-strip">
+    <div class="cin-bg">
+      <img src="img_mercedes.jpg" alt="Mercedes AMG GT cinematic" class="cin-img" id="cinImg" />
+      <div class="cin-overlay"></div>
+    </div>
+    <div class="cin-content container reveal">
+      <div class="section-tag">The Velora Standard</div>
+      <h2 class="cin-headline">ZERO<br/><span class="gold">COMPROMISE</span></h2>
+      <ul class="cin-list">
+        <li>Every listing verified by our expert inspectors</li>
+        <li>White-glove doorstep delivery in 180+ cities</li>
+        <li>AI-matched recommendations tailored to you</li>
+        <li>Dedicated 24/7 luxury concierge support</li>
+        <li>Transparent financing — no hidden fees, ever</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════ FEATURES ═══════════════════════ -->
+  <section id="features" class="features">
+    <div class="container">
+      <div class="features-layout">
+
+        <div class="features-left reveal-left">
+          <div class="section-tag">Why Choose Us</div>
+          <h2 class="section-title">The Velora<br/><em>Advantage</em></h2>
+          <p class="features-desc">Every detail crafted for the discerning buyer who accepts nothing less than perfection.</p>
+          <a href="#" class="btn-primary" style="margin-top:2.5rem">
+            <span>See All Features</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="features-grid">
+          <div class="feat-card reveal">
+            <div class="feat-num">01</div>
+            <div class="feat-icon-wrap"><span>🛡</span></div>
+            <h4>Verified Dealers</h4>
+            <p>Rigorous multi-point vetting, certifications, audits and ongoing performance monitoring.</p>
+          </div>
+          <div class="feat-card reveal">
+            <div class="feat-num">02</div>
+            <div class="feat-icon-wrap"><span>💳</span></div>
+            <h4>Easy Financing</h4>
+            <p>Instant pre-approval, transparent rates, flexible terms. Zero hidden fees — always.</p>
+          </div>
+          <div class="feat-card reveal">
+            <div class="feat-num">03</div>
+            <div class="feat-icon-wrap"><span>⚡</span></div>
+            <h4>Instant Booking</h4>
+            <p>Reserve your dream machine in under 60 seconds across all global partner dealerships.</p>
+          </div>
+          <div class="feat-card reveal">
+            <div class="feat-num">04</div>
+            <div class="feat-icon-wrap"><span>📦</span></div>
+            <h4>Doorstep Delivery</h4>
+            <p>White-glove delivery in 180+ cities. Your car arrives immaculate and ready to drive.</p>
+          </div>
+          <div class="feat-card reveal">
+            <div class="feat-num">05</div>
+            <div class="feat-icon-wrap"><span>🎩</span></div>
+            <h4>24/7 Concierge</h4>
+            <p>A dedicated luxury specialist available around the clock — calls, chat, and in-person.</p>
+          </div>
+          <div class="feat-card reveal">
+            <div class="feat-num">06</div>
+            <div class="feat-icon-wrap"><span>🔒</span></div>
+            <h4>Secure Payments</h4>
+            <p>Military-grade encryption and escrow protection on every transaction, worldwide.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ APP PREVIEW ═══════════════════════ -->
+  <section class="app-section">
+    <div class="app-bg-panel">
+      <img src="img_bmw.jpg" alt="BMW showroom" loading="lazy" />
+      <div class="app-bg-overlay"></div>
+    </div>
+
+    <div class="app-content container">
+      <div class="app-text reveal-left">
+        <div class="section-tag">Mobile Experience</div>
+        <h2 class="section-title">Luxury In The<br/><em>Palm of Your Hand</em></h2>
+        <p>A beautifully crafted mobile interface. Browse, compare, finance and book — all from one stunning app.</p>
+        <ul class="app-feats">
+          <li><span class="af-dot"></span>Real-time inventory with 360° car views</li>
+          <li><span class="af-dot"></span>AI-powered personalised recommendations</li>
+          <li><span class="af-dot"></span>One-tap test drive scheduling</li>
+          <li><span class="af-dot"></span>Live dealer chat and concierge</li>
+        </ul>
+        <div class="store-row">
+          <a href="#" class="store-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.22.15-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            <div><small>Download on the</small><strong>App Store</strong></div>
+          </a>
+          <a href="#" class="store-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.33.18.7.2 1.06.06l12.17-7.02-2.64-2.64-10.59 9.6zM20.6 10.54l-2.94-1.7-2.96 2.96 2.96 2.96 2.97-1.71c.85-.48.85-1.73-.03-2.51zM2.01 1.33C1.9 1.6 1.84 1.9 1.84 2.24v19.52c0 .34.06.64.17.91l.1.09 10.94-10.94v-.26L2.01 1.33zM16.34 8.72L4.24.13c-.35-.21-.74-.22-1.07-.05l10.53 10.53 2.64-1.89z"/></svg>
+            <div><small>Get it on</small><strong>Google Play</strong></div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Phone mockup -->
+      <div class="phone-mockup reveal-right">
+        <div class="phone-shell">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="ps-status">
+              <span class="ps-time">9:41</span>
+              <span class="ps-icons">▐▐ ᵂ ▮</span>
+            </div>
+            <div class="ps-header">
+              <div class="ps-back">←</div>
+              <div class="ps-tabs">
+                <span>Interior</span>
+                <span class="ps-tab-active">Exterior</span>
+              </div>
+            </div>
+            <div class="ps-car-img">
+              <img src="img_lambo.jpg" alt="Lamborghini app" loading="lazy"/>
+              <div class="ps-speed-pill">⏱ 3.0 sec</div>
+            </div>
+            <div class="ps-car-name">
+              Lamborghini<br/><span>Huracán STO</span>
+            </div>
+            <div class="ps-price-row">
+              <div><small>Price</small><strong>$330,000</strong></div>
+              <div><small>Delivery</small><strong>$9,500</strong></div>
+            </div>
+            <div class="ps-spec-grid">
+              <div class="ps-spec"><small>Top Speed</small><span>202 mph</span></div>
+              <div class="ps-spec"><small>Power</small><span>631 hp</span></div>
+              <div class="ps-spec"><small>Engine</small><span>5.2L V10</span></div>
+              <div class="ps-spec"><small>0–60</small><span>3.0 sec</span></div>
+            </div>
+            <button class="ps-book-btn">Reserve Now →</button>
+          </div>
+        </div>
+        <div class="phone-glow"></div>
+
+        <!-- Mini side phone -->
+        <div class="phone-mini">
+          <div class="pmin-screen">
+            <div class="pmin-header">
+              <span class="pmin-tab-a">Interior</span>
+              <span>Exterior</span>
+            </div>
+            <div class="pmin-car">
+              <img src="img_mercedes.jpg" alt="Mercedes interior" loading="lazy"/>
+            </div>
+            <div class="pmin-label">Interior Color</div>
+            <div class="pmin-dots">
+              <span class="pdot active-dot" style="background:#0d0d0d;border:2px solid var(--gold)"></span>
+              <span class="pdot" style="background:#6b4c1e"></span>
+              <span class="pdot" style="background:#2e1a0e"></span>
+              <span class="pdot" style="background:#a8a8a8"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating notification -->
+        <div class="phone-notif">
+          <span>🔔</span>
+          <div><strong>New listing</strong><small>BMW M8 just added</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ TESTIMONIALS ═══════════════════════ -->
+  <section id="reviews" class="reviews">
+    <div class="container">
+      <header class="section-header reveal">
+        <div class="section-tag">Client Stories</div>
+        <h2 class="section-title">Trusted by <em>Connoisseurs</em></h2>
+      </header>
+
+      <div class="reviews-grid">
+
+        <div class="review-card reveal">
+          <div class="rv-top">
+            <div class="rv-stars">★★★★★</div>
+            <div class="rv-car-pill">Porsche 911 GT3</div>
+          </div>
+          <p class="rv-quote">"Velora made buying my Porsche feel like an event, not a transaction. The concierge service and delivery experience were genuinely five-star from start to finish."</p>
+          <div class="rv-author">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80&auto=format&fit=crop&crop=face" alt="James R" class="rv-avatar" loading="lazy"/>
+            <div class="rv-info">
+              <strong>James Redford</strong>
+              <span>Dubai, UAE</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card review-featured reveal">
+          <div class="rv-top">
+            <div class="rv-stars">★★★★★</div>
+            <div class="rv-car-pill">Rolls-Royce Cullinan</div>
+          </div>
+          <p class="rv-quote">"Three vehicles purchased through Velora. The verification process, transparent pricing, and personal concierge set a new standard I never expected in automotive retail."</p>
+          <div class="rv-author">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80&auto=format&fit=crop&crop=face" alt="Sofia P" class="rv-avatar" loading="lazy"/>
+            <div class="rv-info">
+              <strong>Sofia Papadopoulos</strong>
+              <span>London, UK</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card reveal">
+          <div class="rv-top">
+            <div class="rv-stars">★★★★★</div>
+            <div class="rv-car-pill">Tesla Model S Plaid</div>
+          </div>
+          <p class="rv-quote">"Browse to doorstep delivery in 4 days. Transparent financing, incredibly responsive team, and the car arrived absolutely immaculate. Unmatched experience."</p>
+          <div class="rv-author">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80&auto=format&fit=crop&crop=face" alt="Marcus T" class="rv-avatar" loading="lazy"/>
+            <div class="rv-info">
+              <strong>Marcus Tanaka</strong>
+              <span>Tokyo, Japan</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ FINAL CTA ═══════════════════════ -->
+  <section id="contact" class="cta-section">
+    <div class="cta-bg">
+      <img src="img_lambo.jpg" alt="Lamborghini" class="cta-img" loading="lazy"/>
+      <div class="cta-overlay"></div>
+    </div>
+    <div class="cta-inner container reveal">
+      <div class="section-tag" style="justify-content:center">Begin Your Journey</div>
+      <h2 class="cta-headline">OWN YOUR<br/><em>DREAM MACHINE</em></h2>
+      <p class="cta-sub">Join 50,000+ discerning buyers who trust Velora Motors for the world's finest automotive collection.</p>
+      <div class="cta-btns">
+        <a href="#collection" class="btn-primary btn-large">
+          <span>Start Your Journey</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#collection" class="btn-ghost btn-large">Browse Collection</a>
+      </div>
+      <div class="cta-trust-row">
+        <span>🔒 Encrypted &amp; Secure</span>
+        <span>✦ Zero Hidden Fees</span>
+        <span>🏆 Award-Winning Service</span>
+        <span>🌍 180+ Cities</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo">
+            <span class="logo-badge">V</span>
+            <span class="logo-wordmark">Velora<em>Motors</em></span>
+          </a>
+          <p>The world's premier luxury automotive marketplace. Curated. Verified. Delivered.</p>
+          <div class="footer-socials">
+            <a href="#" class="fsoc" aria-label="X">𝕏</a>
+            <a href="#" class="fsoc" aria-label="LinkedIn">in</a>
+            <a href="#" class="fsoc" aria-label="YouTube">▶</a>
+            <a href="#" class="fsoc" aria-label="Instagram">◈</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="#">About Velora</a>
+          <a href="#">Careers</a>
+          <a href="#">Press Kit</a>
+          <a href="#">Blog</a>
+        </div>
+        <div class="footer-col">
+          <h5>Explore</h5>
+          <a href="#">Collection</a>
+          <a href="#">Brands</a>
+          <a href="#">Features</a>
+          <a href="#">Download App</a>
+        </div>
+        <div class="footer-col">
+          <h5>Support</h5>
+          <a href="#">Contact Us</a>
+          <a href="#">FAQ</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2024 Velora Motors. All rights reserved.</p>
+        <p class="footer-credit">Crafted for connoisseurs.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
